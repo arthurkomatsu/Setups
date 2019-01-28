@@ -6,4 +6,4 @@ upload:
 	pio run --target upload
 monitor:
 	clear
-	pio device monitor
+	pio device monitor -b 115200
