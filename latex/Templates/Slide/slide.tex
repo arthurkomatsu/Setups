@@ -1,0 +1,127 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                             %
+%    DOCUMENTO LATEX - HEADER                                                 %
+%                                                                             %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%escolha uma  classe
+\documentclass[notes, red, mathserif]{beamer}
+%\documentclass[handout]{beamer}
+%\documentclass[notes=only]{beamer}
+%\documentclass[trans]{beamer}
+%\documentclass[red]{beamer}
+%\documentclass[compress]{beamer}
+%\documentclass[draft]{beamer}
+%\documentclass[class=article]{beamer}
+\beamertemplateshadingbackground{gray!20}{white!10}
+
+% Pacotes
+\usepackage{pgf,pgfarrows,pgfnodes,pgfautomata,pgfheaps,pgfshade}
+%\usepackage{graphicx}
+\usepackage{amsmath,amssymb}
+\usepackage{colortbl}
+%\usepackage{eurofrak}
+\usepackage[utf8]{inputenc}
+\usepackage[brazil]{babel}
+\usepackage{mathtools}
+\usepackage{xlop}
+\usepackage{diagbox}
+\usepackage[linesnumbered,ruled]{algorithm2e}
+\beamertemplatetransparentcovereddynamic
+
+% Comandos
+%\setlength{\belowcaptionskip}{0cm}
+
+\DeclarePairedDelimiter{\ceil}{\lceil}{\rceil}%
+
+\setbeamercovered{highly dynamic}
+\newcounter{saveenumi}
+\newcommand{\seti}{\setcounter{saveenumi}{\value{enumi}}}
+\newcommand{\conti}{\setcounter{enumi}{\value{saveenumi}}}
+\resetcounteronoverlays{saveenumi}
+% Tema
+\usetheme{Luebeck}
+\useinnertheme{rectangles}
+
+% Informa  o
+\title{Título}
+\subject{}
+\institute{Instituto1
+\\ Instituto2\\ Brasil}
+\date{\today}
+\author[Arthur]
+{
+  Arthur Luis Komatsu Aroeira
+}
+
+ \begin{document}
+ \frame{\titlepage}
+
+\section{Section 1}
+
+\begin{frame}{Frame1}
+
+	\begin{itemize}[<+->]
+		\item Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed congue molestie lectus, sed placerat ligula gravida in. Curabitur quis tincidunt lectus.
+		\item Integer molestie ultricies libero, ac posuere nibh fermentum ac. Etiam at viverra felis. In nec sem in dolor pellentesque feugiat id ut arcu.
+		\item In pharetra euismod arcu, ac lacinia augue ullamcorper ut. Nam nisl sapien, rutrum quis scelerisque fringilla, volutpat vel tellus.
+	\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Frame2}
+
+	\begin{itemize}[<+->]
+		\item Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed congue molestie lectus, sed placerat ligula gravida in. Curabitur quis tincidunt lectus.
+		\item Integer molestie ultricies libero, ac posuere nibh fermentum ac. Etiam at viverra felis. In nec sem in dolor pellentesque feugiat id ut arcu.
+		\item In pharetra euismod arcu, ac lacinia augue ullamcorper ut. Nam nisl sapien, rutrum quis scelerisque fringilla, volutpat vel tellus.
+	\end{itemize}
+
+\end{frame}
+
+\section{Section 2}
+
+\begin{frame}{Frame1}
+
+	\begin{itemize}[<+->]
+		\item Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed congue molestie lectus, sed placerat ligula gravida in. Curabitur quis tincidunt lectus.
+		\item Integer molestie ultricies libero, ac posuere nibh fermentum ac. Etiam at viverra felis. In nec sem in dolor pellentesque feugiat id ut arcu.
+		\item In pharetra euismod arcu, ac lacinia augue ullamcorper ut. Nam nisl sapien, rutrum quis scelerisque fringilla, volutpat vel tellus.
+	\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Frame2}
+
+	\includegraphics[width =  \columnwidth]{image.jpg}
+
+
+\end{frame}
+
+\section{Section 3}
+
+\begin{frame}{Frame1}
+	\begin{itemize}[<+->]
+		\item Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed congue molestie lectus, sed placerat ligula gravida in. Curabitur quis tincidunt lectus.
+		\item Integer molestie ultricies libero, ac posuere nibh fermentum ac. Etiam at viverra felis. In nec sem in dolor pellentesque feugiat id ut arcu.
+		\item In pharetra euismod arcu, ac lacinia augue ullamcorper ut. Nam nisl sapien, rutrum quis scelerisque fringilla, volutpat vel tellus.
+		\begin{enumerate}[<+->]
+			\item Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed congue molestie lectus, sed placerat ligula gravida in. Curabitur quis tincidunt lectus.
+			\item Integer molestie ultricies libero, ac posuere nibh fermentum ac. Etiam at viverra felis. In nec sem in dolor pellentesque feugiat id ut arcu.
+			\item In pharetra euismod arcu, ac lacinia augue ullamcorper ut.
+		\end{enumerate}
+	\end{itemize}
+	\seti
+
+\end{frame}
+
+\begin{frame}{Frame2}
+	\begin{enumerate}[<+->]
+		\conti
+		\item Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed congue molestie lectus, sed placerat ligula gravida in. Curabitur quis tincidunt lectus.
+		\item Integer molestie ultricies libero, ac posuere nibh fermentum ac. Etiam at viverra felis. In nec sem in dolor pellentesque feugiat id ut arcu.
+		\item In pharetra euismod arcu, ac lacinia augue ullamcorper ut. Nam nisl sapien, rutrum quis scelerisque fringilla, volutpat vel tellus.
+	\end{enumerate}
+\end{frame}
+
+\end{document}
