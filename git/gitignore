@@ -6,3 +6,5 @@
 .piolibdeps
 *.vscode
 *.pyc
+*.log
+__pycache__
